@@ -1,6 +1,6 @@
 import { cp } from "fs/promises";
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const copy = async () => {
   const __filename = fileURLToPath(import.meta.url);
