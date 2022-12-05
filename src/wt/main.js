@@ -8,9 +8,9 @@ const __dirname = path.dirname(__filename);
 
 const runWorker = (n) => {
   return new Promise((resolve, reject) => {
-    const worker = new Worker(path.resolve(__dirname, "worker.js"));
-
-    worker.postMessage(n);
+    const worker = new Worker(path.resolve(__dirname, "worker.js"), {
+      workerData: n,
+    });
 
     worker.on("message", resolve);
     worker.on("error", reject);
