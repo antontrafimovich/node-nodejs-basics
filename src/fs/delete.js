@@ -1,6 +1,6 @@
 import { rm } from "fs/promises";
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const remove = async () => {
   const __filename = fileURLToPath(import.meta.url);
