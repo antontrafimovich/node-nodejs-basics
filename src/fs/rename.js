@@ -1,6 +1,6 @@
 import { rename as fsRename, open } from "fs/promises";
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const rename = async () => {
   const __filename = fileURLToPath(import.meta.url);
