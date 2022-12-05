@@ -4,7 +4,7 @@ import { pipeline } from "node:stream";
 import { promisify } from "node:util";
 
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const pipe = promisify(pipeline);
 
@@ -16,7 +16,7 @@ const decompress = async () => {
   const decompressedFile = path.resolve(
     __dirname,
     "files",
-    "fileToCompress1.txt"
+    "fileToCompress.txt"
   );
 
   const unzip = createUnzip();
