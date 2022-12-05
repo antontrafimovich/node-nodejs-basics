@@ -1,6 +1,6 @@
 import { appendFile, open } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const create = async () => {
   const fileName = "fresh.txt";
