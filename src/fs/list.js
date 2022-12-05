@@ -1,6 +1,6 @@
 import { readdir } from "fs/promises";
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const list = async () => {
   const __filename = fileURLToPath(import.meta.url);
