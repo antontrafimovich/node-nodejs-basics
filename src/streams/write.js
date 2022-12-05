@@ -1,7 +1,7 @@
 import fs from "node:fs";
 
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 import { stdin } from "node:process";
 
 const write = async () => {
