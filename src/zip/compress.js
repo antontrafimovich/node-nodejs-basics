@@ -4,7 +4,7 @@ import { pipeline } from "node:stream";
 import { promisify } from "node:util";
 
 import { fileURLToPath } from "node:url";
-import path from "path";
+import path from "node:path";
 
 const pipe = promisify(pipeline);
 
@@ -27,8 +27,6 @@ const compress = async () => {
   } catch (error) {
     console.error(error);
   }
-
-  r.setEncoding("utf-8").pipe(gzip).pipe(w);
 };
 
 await compress();
